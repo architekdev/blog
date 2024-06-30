@@ -1,0 +1,37 @@
+  header .tag,
+  .tags .tag,
+  .recent-post .tag,
+  .tagged-post-tags .tag {
+  	position: relative;
+  	padding: 0 0.25rem;
+  }
+
+  header .tag:before,
+  .recent-post .tag:before,
+  .tags .tag:before,
+  .recent-post .tag:before,
+  .tagged-post-tags .tag:before {
+  	position: absolute;
+  	content: "";
+  	display: block;
+  	height: 100%;
+  	width: 100%;
+  	left: 0;
+  	border-radius: 4px;
+  	background-color: rgb(var(--primary-accent-clr));
+  	opacity: 0.2;
+  	transition: all 200ms ease;
+  }
+
+  .tag:hover:before {
+  	opacity: 0.4;
+  }
+
+
+  .article-header-info .tag {
+  	color: rgb(var(--text-clr));
+  }
+
+  .article-header-info .tag:before {
+  	background-color: rgb(var(--text-clr));
+  }

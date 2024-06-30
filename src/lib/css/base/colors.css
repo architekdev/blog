@@ -1,0 +1,49 @@
+:root {
+  --primary-clr: 35, 100, 170;
+  --secondary-clr: 61, 165, 217;
+  --tertiary-clr: 115, 191, 184;
+
+  --primary-accent-clr: 234, 115, 23;
+  --secondary-accent-clr: 254, 198, 1;
+
+  /* --gray-clr: 224, 224, 224; */
+  --gray-clr: 239, 239, 239;
+  --text-clr: 7, 20, 34;
+  --bg-clr: 255, 255, 255;
+}
+
+.dark:root {
+  --primary-clr: 234, 115, 23;
+  --secondary-clr: 254, 198, 1;
+  --tertiary-clr: 115, 191, 184;
+
+  --primary-accent-clr: 35, 100, 170;
+  --secondary-accent-clr: 61, 165, 217;
+
+  /* --gray-clr: 224, 224, 224; */
+  --gray-clr: 19, 31, 44;
+  --text-clr: 255, 255, 255;
+  --bg-clr: 7, 20, 34;
+}
+
+body {
+  background-color: rgb(var(--bg-clr));
+}
+
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+ol {
+  color: rgb(var(--text-clr));
+}
+
+a {
+  color: rgb(var(--primary-clr));
+}

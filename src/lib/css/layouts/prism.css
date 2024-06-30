@@ -1,0 +1,220 @@
+/* * Lucario Theme originally by Raphael Amorim [@raphamorim] */
+/* * https://github.com/raphamorim/lucario */
+/* * */
+/* * Ported for PrismJS by Christopher Kapic [@christopher-kapic] */
+
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #f8f8f2;
+  background: none;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+  font-family: var(--monospace-font);
+  font-size: 1.2rem;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: 1em;
+  margin: .5em 0;
+  overflow: auto;
+  border-radius: 0.3em;
+}
+
+.dark :not(pre)>code[class*="language-"],
+.dark pre[class*="language-"] {
+  background: #263E5240;
+}
+
+:not(pre)>code[class*="language-"],
+pre[class*="language-"] {
+  background: #263E52;
+}
+
+/* Inline code */
+:not(pre)>code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #5c98cd;
+}
+
+.token.punctuation {
+  color: #f8f8f2;
+}
+
+.namespace {
+  opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #F05E5D;
+}
+
+.token.boolean,
+.token.number {
+  color: #BC94F9;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #FCFCD6;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+  color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+  color: #66D8EF;
+}
+
+.token.keyword {
+  color: #6EB26E;
+}
+
+.token.regex,
+.token.important {
+  color: #F05E5D;
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+
+/* My Added Styles */
+
+p>code {
+  display: inline-block;
+  padding: 0 4px;
+  font-size: 0.8em;
+  background: #263E52;
+  color: #f8f8f2;
+  border-radius: 4px;
+}
+
+.dark p>code {
+  background: #263E5240;
+}
+
+pre {
+  position: relative;
+}
+
+/* /* Code blocks */
+
+pre[class*="language-"] {
+  padding: 4rem 1rem 1rem;
+  margin: 2rem 0;
+  overflow: auto;
+}
+
+pre[class="language-undefined"] {
+  padding: 1rem 1rem;
+}
+
+/* Language Display */
+
+pre[class*="language-"]:before {
+  position: absolute;
+  content: "Code";
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(to right, #848fa5, #263E5200);
+  font-family: var(--body-font);
+  font-weight: 600;
+  border-radius: 4px 4px 0 0;
+}
+
+pre.language-undefined:before {
+  display: none;
+}
+
+pre.language-bash:before,
+pre.language-terminal:before {
+  content: "Terminal";
+}
+
+pre.language-fs:before {
+  content: "Project files";
+}
+
+pre.language-css:before {
+  content: "CSS";
+}
+
+pre.language-php:before {
+  content: "PHP";
+}
+
+pre.language-markdown:before,
+pre.language-md:before {
+  content: "Markdown";
+}
+
+pre.language-html:before {
+  content: "HTML";
+}
+
+pre.language-vue:before {
+  content: "Vue";
+}
+
+pre.language-svelte:before {
+  content: "Svelte";
+}
+
+pre.language-js:before,
+pre.language-javascript:before {
+  content: "JavaScript";
+}
+
+pre.language-python:before {
+  content: "Python";
+}

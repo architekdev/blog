@@ -1,0 +1,116 @@
+.article-container:first-child,
+.article-container h1:first-child,
+.article-container h2:first-child,
+.article-container p:first-child {
+  margin-top: 0;
+}
+
+.article-container:last-child {
+  margin-bottom: 0;
+}
+
+.article-container {
+
+  p {
+    line-height: 1.7;
+  }
+
+  >p:first-child::first-line {
+    color: rgb(var(--secondary-clr));
+  }
+
+  p,
+  ul,
+  ol {
+    margin: 2rem 0;
+    font-size: 1.2rem;
+  }
+
+  ul,
+  ol {
+    padding-left: 1.5rem;
+  }
+
+  ul ul,
+  ol ol,
+  ul ol,
+  ol ul {
+    margin: 0;
+  }
+
+  ul li::marker,
+  ol li::marker {
+    color: rgb(var(--secondary-clr));
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    position: relative;
+    margin-top: 3rem;
+    scroll-margin-top: 1rem;
+    margin-bottom: 2rem;
+    padding-right: 1.5rem;
+    cursor: pointer;
+  }
+
+  h1,
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.75rem;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+  }
+
+  h1 .icon::before,
+  h2 .icon::before,
+  h3 .icon::before,
+  h4 .icon::before,
+  h5 .icon::before,
+  h6 .icon::before {
+    content: "#";
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: rgb(var(--secondary-clr));
+    display: none;
+  }
+
+  h1:hover .icon::before,
+  h2:hover .icon::before,
+  h3:hover .icon::before,
+  h4:hover .icon::before,
+  h5:hover .icon::before,
+  h6:hover .icon::before {
+    display: block;
+  }
+
+  img {
+    margin: 2rem 0;
+    width: 100%;
+  }
+
+
+  hr {
+    margin: 2rem 0;
+    border-top: 1px solid rgba(var(--secondary-clr), 1);
+  }
+
+  blockquote {
+    padding: var(--padding-inner);
+    border-left: 3px solid rgb(var(--primary-accent-clr));
+
+    :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+}

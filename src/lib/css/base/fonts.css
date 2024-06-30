@@ -1,0 +1,68 @@
+:root {
+  --body-font: 'Karla Variable', Arial, Helvetica, sans-serif;
+  --headings-font: 'DM Serif Display', 'Times New Roman', Times, serif;
+  --monospace-font: 'Courier Prime', Courier, monospace;
+}
+
+html,
+body,
+div,
+p,
+button,
+input,
+.body-font {
+  font-family: var(--body-font);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.headings-font {
+  font-family: var(--headings-font);
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+a[class] {
+  text-decoration: none;
+}
+
+a[class]:hover,
+a[class]:focus {
+  text-decoration: none;
+}
+
+code,
+.monospace-font {
+  font-family: var(--monospace-font);
+}
+
+main {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: 0.8em;
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+  a {
+    color: rgb(var(--primary-accent-clr));
+  }
+}
