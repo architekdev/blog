@@ -105,6 +105,7 @@
   }
 
   blockquote {
+    font-style: italic;
     padding: var(--padding-inner);
     border-left: 3px solid rgb(var(--primary-accent-clr));
 

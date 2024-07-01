@@ -11,25 +11,22 @@
   let dateFormatted;
   let updateFormatted;
 
-  let headingImages;
+  let headingImage;
   let randomImgNum = Math.floor(Math.random() * 10) + 1;
 
   dateFormatted = formatDate(date, dateFormatted);
   updateFormatted = formatDate(update, updateFormatted);
 
   onMount(async () => {
-    headingImages = document.querySelectorAll(".article-header-container");
-    headingImages.forEach(function (headingImage) {
-      headingImage.style.setProperty(
-        "--background-image",
-        'url("/images/backgrounds/blurred-' + randomImgNum + '.jpg")',
-      );
-    });
+    headingImage.style.setProperty(
+      "--background-image",
+      'url("/images/backgrounds/blurred-' + randomImgNum + '.jpg")',
+    );
   });
 </script>
 
 <header>
-  <section class="article-header-container">
+  <section class="article-header-container" bind:this={headingImage}>
     <div
       class="article-inner-container max-width-container center-container padding"
     >
@@ -67,7 +64,7 @@
 
 <style>
   .article-header-container {
-    --background-image: initial;
+    --background-image: unset;
     position: relative;
     padding: 4rem 0;
   }
