@@ -112,6 +112,12 @@
     justify-content: space-between;
   }
 
+  @media screen and (max-width: 640px) {
+    .tagged-post-extras {
+      flex-direction: column;
+    }
+  }
+
   .tagged-post-date {
     color: rgb(var(--primary-clr));
   }

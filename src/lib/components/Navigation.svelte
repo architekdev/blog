@@ -89,10 +89,17 @@
     </button>
 
     <div class="mobile-nav padding" class:show={showNav}>
+      <button on:click={navToggle} class="mobile-menu">
+        <span class="slice"></span>
+        <span class="slice"></span>
+        <span class="slice"></span>
+      </button>
       <ul class="nav-items-container">
         {#each navItems as navItem}
           <li>
-            <a class="nav-link" href={navItem.path}>{navItem.pathName}</a>
+            <a on:click={navToggle} class="nav-link" href={navItem.path}
+              >{navItem.pathName}</a
+            >
           </li>
         {/each}
 
@@ -194,19 +201,29 @@
     }
 
     .mobile-nav {
-      display: none;
+      display: flex;
+      flex-direction: column;
       position: fixed;
       gap: 2rem;
-      top: 104px;
-      left: 0;
+      top: 0;
+      left: -20vw;
       width: 100vw;
-      height: calc(100vh - 104px);
+      height: 100vh;
       background: rgb(var(--bg-clr));
-      z-index: 100;
+      z-index: -100;
+      opacity: 0;
+      transition: all 200ms ease;
+      transition-delay: 100ms;
+    }
+
+    .mobile-nav .mobile-menu {
+      margin-top: 8px;
     }
 
     .show {
-      display: block;
+      left: 0;
+      opacity: 1;
+      z-index: 100;
     }
 
     .mobile-nav .nav-items-container {

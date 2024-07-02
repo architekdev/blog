@@ -166,6 +166,12 @@
     justify-content: space-between;
   }
 
+  @media screen and (max-width: 640px) {
+    .recent-post-extras {
+      flex-direction: column;
+    }
+  }
+
   .recent-post-date {
     color: rgb(var(--primary-clr));
   }
