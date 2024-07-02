@@ -22,9 +22,8 @@
   <section class="welcome padding">
     <h1>Hey, I'm Amy</h1>
     <p>
-      This is my content platform <strong>Architek</strong>
-      <br />
-      Here you'll find content about web developement and tech in general. Enjoy!
+      <strong>Architek</strong> is my blog where you'll find content about web developement
+      and tech in general. Enjoy!
     </p>
   </section>
 </div>

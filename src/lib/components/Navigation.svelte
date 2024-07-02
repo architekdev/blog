@@ -15,6 +15,12 @@
       pathName: "blog",
     },
   ];
+
+  let showNav = false;
+
+  let navToggle = () => {
+    showNav = !showNav;
+  };
 </script>
 
 <nav class="max-width-container center-container">
@@ -66,7 +72,7 @@
       </div>
       <h4>Architek</h4></a
     >
-    <ul class="nav-items-container">
+    <ul class="nav-items-container desktop-nav">
       {#each navItems as navItem}
         <li>
           <a class="nav-link" href={navItem.path}>{navItem.pathName}</a>
@@ -75,6 +81,24 @@
 
       <DarkSwitch />
     </ul>
+
+    <button on:click={navToggle} class="mobile-menu">
+      <span class="slice"></span>
+      <span class="slice"></span>
+      <span class="slice"></span>
+    </button>
+
+    <div class="mobile-nav padding" class:show={showNav}>
+      <ul class="nav-items-container">
+        {#each navItems as navItem}
+          <li>
+            <a class="nav-link" href={navItem.path}>{navItem.pathName}</a>
+          </li>
+        {/each}
+
+        <DarkSwitch />
+      </ul>
+    </div>
   </div>
 </nav>
 
@@ -123,5 +147,71 @@
     display: flex;
     align-items: center;
     gap: 2rem;
+  }
+
+  .mobile-menu,
+  .mobile-nav {
+    display: none;
+  }
+
+  @media screen and (max-width: 640px) {
+    .desktop-nav {
+      display: none;
+    }
+
+    .mobile-menu {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 6px;
+      background-color: transparent;
+      cursor: pointer;
+    }
+
+    .mobile-menu .slice {
+      display: block;
+      height: 4px;
+      width: 20px;
+      background-color: rgb(var(--text-clr));
+      transition: all 200ms ease;
+    }
+
+    .mobile-menu .slice:first-child,
+    .mobile-menu .slice:last-child {
+      width: 24px;
+    }
+
+    .mobile-menu:hover .slice,
+    .mobile-menu:focus .slice {
+      width: 24px;
+    }
+
+    .mobile-menu:hover .slice:first-child,
+    .mobile-menu:hover .slice:last-child,
+    .mobile-menu:focus .slice:first-child,
+    .mobile-menu:focus .slice:last-child {
+      width: 20px;
+    }
+
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      gap: 2rem;
+      top: 104px;
+      left: 0;
+      width: 100vw;
+      height: calc(100vh - 104px);
+      background: rgb(var(--bg-clr));
+      z-index: 100;
+    }
+
+    .show {
+      display: block;
+    }
+
+    .mobile-nav .nav-items-container {
+      width: 100%;
+      flex-direction: column;
+    }
   }
 </style>
