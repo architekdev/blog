@@ -7,7 +7,7 @@
     <div>
       <h2>Navigation</h2>
     </div>
-    <ul>
+    <ul class="toc-entries">
       {#each tocEntries as tocEntry}
         <li class="toc-entry toc-{tocEntry.tagName.toLowerCase()}">
           <a class="toc-entry-link" href="#{tocEntry.id}"

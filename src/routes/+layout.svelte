@@ -1,5 +1,18 @@
 <script>
-  import "$lib/css/app.css";
+  import "@fontsource-variable/karla";
+  import "@fontsource/dm-serif-display";
+  import "@fontsource/courier-prime";
+
+  import "./css/base/reset.css";
+  import "./css/base/colors.css";
+  import "./css/base/fonts.css";
+  import "./css/base/containers.css";
+
+  import "./css/components/tag.css";
+
+  import "./css/layouts/all-tags.css";
+  import "./css/layouts/prism.css";
+  import "./css/layouts/article.css";
 
   import Header from "$components/Header.svelte";
   import Footer from "$components/Footer.svelte";

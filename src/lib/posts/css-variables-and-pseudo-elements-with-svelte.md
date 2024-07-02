@@ -75,7 +75,7 @@ That's everything. This is an example of why I have been enjoying Svelte, I love
 
 ## The complete component
 
-Here's the overall component,:
+Here's the overall component:
 
 ```svelte
 <script>

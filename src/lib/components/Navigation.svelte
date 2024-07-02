@@ -69,7 +69,7 @@
     <ul class="nav-items-container">
       {#each navItems as navItem}
         <li>
-          <a href={navItem.path}>{navItem.pathName}</a>
+          <a class="nav-link" href={navItem.path}>{navItem.pathName}</a>
         </li>
       {/each}
 

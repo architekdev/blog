@@ -18,7 +18,7 @@
     {#each data.posts as post}
       <li class="blog-post">
         <div class="blog-post-container">
-          <a href={post.path}>
+          <a class="blog-post-link" href={post.path}>
             <h2>
               {post.meta.title}
             </h2>

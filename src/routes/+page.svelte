@@ -37,7 +37,7 @@
       {#if i < recentPostNum}
         <li class="recent-post">
           <div class="recent-post-container">
-            <a href={post.path}>
+            <a class="recent-post-link" href={post.path}>
               <h2>
                 {post.meta.title}
               </h2>

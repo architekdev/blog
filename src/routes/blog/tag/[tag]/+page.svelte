@@ -22,7 +22,7 @@
         {#each data.posts as post}
           <li class="tagged-post">
             <div class="tagged-post-container">
-              <a href={post.path}>
+              <a class="tagged-post-link" href={post.path}>
                 <h2>
                   {post.meta.title}
                 </h2>
