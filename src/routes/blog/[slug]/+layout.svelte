@@ -3,6 +3,7 @@
   import { quartIn, quadOut } from "svelte/easing";
 
   import TitleHeader from "$components/TitleHeader.svelte";
+  import DashCallout from "$components/DashCallout.svelte";
 
   export let data;
   const { title, date, update, tags, readingTime } = data;
@@ -18,4 +19,11 @@
   >
     <slot />
   </div>
+  <DashCallout>
+    <p>
+      Hey, I'm Amy - <strong>Architek</strong> is my blog about web developement
+      and tech in general. Thank you for reading 😊
+    </p>
+    <p><a href="#header">back to top ⬆️</a></p>
+  </DashCallout>
 {/key}

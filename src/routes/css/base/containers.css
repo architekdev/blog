@@ -63,6 +63,10 @@
   padding-right: var(--padding-right);
 }
 
+.padding-top {
+  padding-top: var(--padding-top);
+}
+
 .padding-bottom {
   padding-bottom: var(--padding-bottom);
 }

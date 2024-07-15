@@ -1,5 +1,6 @@
 <script>
   import { formatDate } from "$lib/utils/formatting.js";
+  import DashCallout from "../lib/components/DashCallout.svelte";
 
   let recentPostNum = 6;
   let dateFormatted;
@@ -18,15 +19,13 @@
   <meta property="og:title" content="Architek" />
 </svelte:head>
 
-<div class="welcome-container max-width-container center-container">
-  <section class="welcome padding">
-    <h1>Hey, I'm Amy</h1>
-    <p>
-      <strong>Architek</strong> is my blog where you'll find content about web developement
-      and tech in general. Enjoy!
-    </p>
-  </section>
-</div>
+<DashCallout>
+  <h1>Hey, I'm Amy</h1>
+  <p>
+    <strong>Architek</strong> is my blog where you'll find content about web developement
+    and tech in general. Enjoy!
+  </p>
+</DashCallout>
 
 <section class="max-width-container center-container padding">
   <h2>Recent Posts:</h2>
@@ -82,33 +81,6 @@
 </div>
 
 <style>
-  .welcome-container {
-    padding: 4em 1rem;
-  }
-
-  .welcome {
-    position: relative;
-    border: 2px solid rgb(var(--primary-accent-clr));
-    border-radius: 4px;
-  }
-
-  .welcome::before {
-    position: absolute;
-    content: "";
-    display: block;
-    top: -8px;
-    left: -8px;
-    height: calc(100% + 5px);
-    width: calc(100% + 5px);
-    border: 2px dashed rgb(var(--secondary-accent-clr));
-    border-radius: 4px;
-    pointer-events: none;
-  }
-
-  .welcome h1 {
-    font-size: 3rem;
-  }
-
   .recent-posts {
     display: grid;
     grid-template-columns: 1fr 1fr;

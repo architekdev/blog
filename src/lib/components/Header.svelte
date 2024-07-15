@@ -2,6 +2,6 @@
   import Navigation from "./Navigation.svelte";
 </script>
 
-<header>
+<header id="header">
   <Navigation />
 </header>

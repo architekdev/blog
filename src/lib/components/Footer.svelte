@@ -6,7 +6,12 @@
       <div class="footer-home-img" title="Architek Logo"></div>
       <h4>Architek</h4></a
     >
-    <p class="footer-copy">&copy; {new Date().getFullYear()} Architek</p>
+    <div class="footer-info">
+      <p class="footer-copy">&copy; {new Date().getFullYear()} Architek</p>
+      <p class="footer-link">
+        <a href="https://kit.svelte.dev/">Made using Sveltekit</a>
+      </p>
+    </div>
   </section>
 </footer>
 
@@ -26,12 +31,12 @@
     display: flex;
     align-items: center;
     gap: 1rem;
-    opacity: 0.2;
+    opacity: 0.4;
   }
 
   .footer-home-link:hover,
   .footer-home-link:focus {
-    opacity: 0.4;
+    opacity: 0.6;
   }
 
   .footer-home-link .footer-home-img {
@@ -46,7 +51,10 @@
     background-image: url("/images/logos/white-line-1080.svg");
   }
 
-  .footer-copy {
-    opacity: 0.2;
+  .footer-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    opacity: 0.4;
   }
 </style>

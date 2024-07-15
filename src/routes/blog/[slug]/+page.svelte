@@ -31,7 +31,7 @@
 </svelte:head>
 
 <section
-  class="article-outer-container max-width-container center-container padding"
+  class="article-outer-container max-width-container center-container padding-top padding-x"
 >
   <ContentNav tocEntries={headings} />
   <article class="article article-container inner-container center-container">
