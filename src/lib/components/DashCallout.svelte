@@ -31,4 +31,8 @@
   :global(.dashed h1) {
     font-size: 3rem;
   }
+
+  :global(.dashed p) {
+    font-size: 1.2rem;
+  }
 </style>

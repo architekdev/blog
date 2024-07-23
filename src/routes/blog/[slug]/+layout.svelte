@@ -24,6 +24,6 @@
       Hey, I'm Amy - <strong>Architek</strong> is my blog about web developement
       and tech in general. Thank you for reading 😊
     </p>
-    <p><a href="#header">back to top ⬆️</a></p>
+    <p><a href="#header">back to top&nbsp;&nbsp;&nbsp;⬆️</a></p>
   </DashCallout>
 {/key}

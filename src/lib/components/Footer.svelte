@@ -1,17 +1,32 @@
+<script>
+  import Logo from "./Logo.svelte";
+  import NavItems from "./NavItems.svelte";
+</script>
+
 <footer>
   <section
     class="footer-container max-width-container center-container padding"
   >
-    <a class="footer-home-link" href="/">
-      <div class="footer-home-img" title="Architek Logo"></div>
-      <h4>Architek</h4></a
-    >
+    <Logo />
     <div class="footer-info">
       <p class="footer-copy">&copy; {new Date().getFullYear()} Architek</p>
-      <p class="footer-link">
-        <a href="https://kit.svelte.dev/">Made using Sveltekit</a>
+      <p>
+        Made with <a
+          class="footer-link"
+          target="_blank"
+          rel="”noopener”"
+          href="https://kit.svelte.dev/">Sveltekit</a
+        >
+        |
+        <a
+          class="footer-link"
+          target="_blank"
+          rel="”noopener”"
+          href="https://mdsvex.pngwn.io/">mdsvex</a
+        >
       </p>
     </div>
+    <NavItems itemsClass="footer" />
   </section>
 </footer>
 
@@ -21,40 +36,45 @@
   }
 
   .footer-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: grid;
+    grid-template-areas:
+      "logo ..."
+      "nav links";
+    gap: 2rem;
     color: rgb(var(--text-clr));
   }
 
-  .footer-home-link {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    opacity: 0.4;
-  }
-
-  .footer-home-link:hover,
-  .footer-home-link:focus {
-    opacity: 0.6;
-  }
-
-  .footer-home-link .footer-home-img {
-    height: 40px;
-    width: 54px;
-    background-image: url("/images/logos/black-line-1080.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  .dark .footer-home-link .footer-home-img {
-    background-image: url("/images/logos/white-line-1080.svg");
-  }
-
   .footer-info {
+    grid-area: links;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    opacity: 0.4;
+  }
+
+  :global(.footer-container .nav-items-container) {
+    grid-area: nav;
+    align-items: flex-end;
+  }
+
+  .footer-link:hover,
+  .footer-link:focus {
+    text-decoration: underline;
+  }
+
+  @media screen and (max-width: 640px) {
+    .footer-container {
+      grid-template-areas:
+        "logo"
+        "links"
+        "nav";
+    }
+
+    :global(.footer-container .nav-home-link) {
+      justify-content: center;
+    }
+
+    .footer-info {
+      align-items: center;
+    }
   }
 </style>
